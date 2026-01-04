@@ -8,7 +8,7 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 * **Enclosure:** [The Net Return Pro 8](https://www.thenetreturn.com/)
     * *Safety:* No Fly Zone Extension + Side Barriers
 * **Turf:** Fiberbuilt Grass Series (Hourglass)
-* **Launch Monitor:** FlightScope Mevo+ (Gen 2)
+* **Launch Monitor:** FlightScope Mevo Gen 2 + Pro Package + Face Impact
 
 ### 🖥️ The Engine (HP Z640 Workstation)
 * **GPU:** NVIDIA RTX 5060 (Gigabyte Windforce)
