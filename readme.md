@@ -51,7 +51,13 @@ The primary location for this simulator is a shared **Kids' Playroom**. This int
 While a full Impact Screen + Projector is the gold standard, it was not viable for this build due to:
 * **Hardware Hiding:** I did not want a gaming desktop tower and overhead projector permanently mounted in a playroom.
 * **Cost vs. Flexibility:** A quality projector setup is expensive and fixed.
-* **The Solution:** The **Headless Streaming** architecture allows the powerful PC (HP Z640) to live safely in the office, while the **65-inch TV** serves as the "Display" via Moonlight. This keeps the playroom clean, quiet, and free of sensitive fan-cooled electronics.
+* **The Solution:** The **Headless Streaming** architecture allows the PC to live safely in the office, while the **65-inch TV** serves as the "Display" via Moonlight. This keeps the playroom clean, quiet, and free of sensitive electronics.
+
+### 3. The Repurposing Strategy
+Efficiency was key to this build. Instead of buying a dedicated simulator PC, I leveraged existing high-end hardware:
+* **The Workstation:** The **HP Z640** was already my daily driver, used for 3D modeling, [xLights](https://xlights.org/) sequence design, and personal tasks.
+* **The Screens:** The **49" Ultrawide** and **27" Vertical** monitors were also existing equipment.
+* **The Upgrade:** The only "new" PC hardware required was the **RTX 5060** (for modern HDMI 2.1/AV1 support) and the **Ghost Monitor Plug** to bridge the gap between the office monitors and the living room TV.
 
 ## 🚀 "Open The Shop" (BETA: Automation still in testing waiting on hardware)
 
