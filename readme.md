@@ -36,7 +36,7 @@ For this specific Z640 build, the **RTX 5060** was chosen as the "Value King" fo
 
 ---
 
-## 🚀 "Open The Shop" (Automation)
+## 🚀 "Open The Shop" (BETA: Automation still in testing waiting on hardware)
 
 To keep the office monitors free for work, the simulator runs in a "Headless" state.
 
@@ -44,7 +44,7 @@ To keep the office monitors free for work, the simulator runs in a "Headless" st
 2.  **The Script:** Running `scripts/open_shop.bat` launches the software and uses `nircmd` to snap the window to the hidden 4K display.
 3.  **The Stream:** Sunshine captures *only* the Ghost Monitor output, beaming a perfect 4K signal to the TV.
 
-## 🎮 Remote Controls
+## 🎮 Remote Controls (Beta: Still testing and coding)
 
 Custom Unified Remote panels are located in `/remotes`.
 
