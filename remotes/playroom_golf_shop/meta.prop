@@ -1,0 +1,14 @@
+# METADATA DEFINITION
+# This file provides the details shown in the Unified Remote App list.
+
+# The name displayed in the app
+meta.name: Playroom Pro Shop
+
+# Your name as the creator
+meta.author: Kent Hislop
+
+# A short description of what this remote does
+meta.description: Master control for E6 Connect and Awesome Golf automation.
+
+# Tags help you filter the list (keep "custom")
+meta.tags: custom
