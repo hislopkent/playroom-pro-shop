@@ -54,7 +54,7 @@ Custom Unified Remote panels are located in `/remotes`.
 
 | Hitting Bay | Command Station | Control Panel |
 | :---: | :---: | :---: |
-| ![Hitting Bay](images/setup_hitting_bay.jpg) | ![PC Setup](images/setup_pc_monitor.jpg) | ![Tablet Mount](images/setup_tablet_mount.jpg) |
+| ![Hitting Bay](images/setup_hitting_bay.jpg) | ![PC Setup](images/IMG_0823.jpeg) | ![Tablet Mount](images/setup_tablet_mount.jpg) |
 | *Net Return + Mevo+* | *Z640 + Ghost Monitor* | *Fire HD 10 + Mount* |
 
 
