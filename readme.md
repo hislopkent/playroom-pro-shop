@@ -48,5 +48,15 @@ To keep the office monitors free for work, the simulator runs in a "Headless" st
 
 Custom Unified Remote panels are located in `/remotes`.
 
+---
+
+## 📸 The Setup Gallery
+
+| Hitting Bay | Command Station | Control Panel |
+| :---: | :---: | :---: |
+| ![Hitting Bay](images/setup_hitting_bay.jpg) | ![PC Setup](images/setup_pc_monitor.jpg) | ![Tablet Mount](images/setup_tablet_mount.jpg) |
+| *Net Return + Mevo+* | *Z640 + Ghost Monitor* | *Fire HD 10 + Mount* |
+
+
 * **Awesome Golf:** Simplified interface for Mack and Brek.
 * **E6 Connect:** Full simulation controls (Mulligans, Aim, Club Selection).
