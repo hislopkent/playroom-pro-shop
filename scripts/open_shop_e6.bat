@@ -1,24 +1,39 @@
 @echo off
-:: ========================================================
-:: THE PLAYROOM PRO SHOP - LAUNCH SEQUENCE (E6 CONNECT)
-:: ========================================================
+:: ============================================================================
+:: SCRIPT: OPEN SHOP (E6 CONNECT)
+:: AUTHOR: Kent Hislop
+:: PURPOSE: Launches E6 Connect and moves it to the "Ghost Monitor" (Dummy Plug)
+:: DEPENDENCIES: nircmd.exe must be installed or in the same folder.
+:: ============================================================================
 
-:: 1. Coordinates for the "Ghost Monitor" (Target: 4K TV Stream)
-:: Assumes your Main + Vertical monitors occupy the first 5120 pixels.
+:: --- CONFIGURATION SECTION ---
+:: X_POS: The pixel coordinate where your Dummy Plug starts.
+:: (Example: If main screens are 5120px wide, the dummy starts at 5120)
 set X_POS=5120
+
+:: Y_POS: Always 0 unless you have stacked monitors.
 set Y_POS=0
+
+:: RESOLUTION: The target resolution of your TV/Dummy Plug (4K = 3840x2160)
 set WIDTH=3840
 set HEIGHT=2160
 
-:: 2. Launch E6 Connect
-echo Opening the Pro Shop for E6 Connect...
+:: --- STEP 1: LAUNCH THE SOFTWARE ---
+echo [STATUS] Launching E6 Connect...
+:: 'start ""' tells Windows to open the app and return to this script immediately.
 start "" "C:\Program Files (x86)\E6 Connect\E6Connect.exe"
 
-:: 3. Wait for Load (E6 is heavy, give it time)
+:: --- STEP 2: WAIT FOR LOAD ---
+:: E6 Connect is a heavy application. We wait 15 seconds to ensure the window
+:: is fully created before we try to move it.
+:: If the game isn't moving, increase this number (e.g., timeout /t 20)
+echo [STATUS] Waiting 15 seconds for startup...
 timeout /t 15
 
-:: 4. Move to Ghost Display
-:: Note: The Window Title for E6 is usually just "E6 Connect"
+:: --- STEP 3: MOVE TO GHOST MONITOR ---
+:: We use 'nircmd' to grab the window named "E6 Connect" and force it
+:: to the coordinates defined above.
+:: Syntax: setsize [title] [x] [y] [width] [height]
 nircmd win setsize title "E6 Connect" %X_POS% %Y_POS% %WIDTH% %HEIGHT%
 
-echo Stream Ready.
+echo [SUCCESS] E6 Connect is running on the Ghost Display.
