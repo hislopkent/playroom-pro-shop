@@ -1,22 +1,26 @@
 @echo off
-:: ========================================================
-:: THE PLAYROOM PRO SHOP - LAUNCH SEQUENCE (AWESOME GOLF)
-:: ========================================================
+:: ============================================================================
+:: SCRIPT: OPEN SHOP (AWESOME GOLF)
+:: PURPOSE: Launches Awesome Golf for the kids and moves it to the Ghost Monitor
+:: ============================================================================
 
-:: 1. Coordinates for the "Ghost Monitor"
+:: --- CONFIGURATION ---
 set X_POS=5120
 set Y_POS=0
 set WIDTH=3840
 set HEIGHT=2160
 
-:: 2. Launch Awesome Golf
-echo Opening the Pro Shop for the Kids...
+:: --- STEP 1: LAUNCH ---
+echo [STATUS] Launching Awesome Golf...
 start "" "C:\Program Files\Awesome Golf\AwesomeGolf.exe"
 
-:: 3. Wait for Load (Awesome Golf loads fast)
+:: --- STEP 2: WAIT ---
+:: Awesome Golf loads much faster than E6, so we only wait 8 seconds.
+echo [STATUS] Waiting 8 seconds...
 timeout /t 8
 
-:: 4. Move to Ghost Display
+:: --- STEP 3: MOVE ---
+:: Note: The window title must match exactly what you see in the Taskbar.
 nircmd win setsize title "Awesome Golf" %X_POS% %Y_POS% %WIDTH% %HEIGHT%
 
-echo Stream Ready.
+echo [SUCCESS] Awesome Golf is ready.
