@@ -5,10 +5,10 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 ## 🛠️ The Gear
 
 ### 🟢 Hitting Station
-* **Enclosure:** [The Net Return Pro 8](https://www.thenetreturn.com/)
+* **Hitting Net:** [The Net Return Pro 8](https://www.thenetreturn.com/)
     * *Safety:* No Fly Zone Extension + Side Barriers
 * **Turf:** Fiberbuilt Grass Series (Hourglass)
-* **Launch Monitor:** FlightScope Mevo+ (Gen 2)
+* **Launch Monitor:** FlightScope Mevo Gen 2 + Pro Package + Face Impact
 
 ### 🖥️ The Engine (HP Z640 Workstation)
 * **GPU:** NVIDIA RTX 5060 (Gigabyte Windforce)
@@ -20,9 +20,9 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
     3.  **Ghost Monitor:** 4K HDMI Dummy Plug (The Simulator Feed)
 
 ### 📺 The Viewing Deck
-* **Display:** 65-inch 4K TV
+* **Display:** 50-inch 1080P TV soon to be upgrade to 65-inch 4K TV
 * **Streaming:** Moonlight (Client) <-> Sunshine (Host)
-* **Control:** Amazon Fire HD 10 Tablet (Wall Mounted)
+* **Control:** Amazon Fire HD 10 Tablet (To be mounted to TV)
 
 ---
 
@@ -57,6 +57,7 @@ Custom Unified Remote panels are located in `/remotes`.
 | ![Hitting Bay](images/IMG_0770.jpeg) | ![PC Setup](images/IMG_0823.jpeg) | ![Tablet Mount](images/setup_tablet_mount.jpg) |
 | *Net Return + Mevo+* | *Z640 + Ghost Monitor* | *Fire HD 10 + Mount* |
 
-
-* **Awesome Golf:** Simplified interface for Mack and Brek.
-* **E6 Connect:** Full simulation controls (Mulligans, Aim, Club Selection).
+* **Awesome Golf:** Simplified interface for kids and practice.
+* **E6 Connect:** Full simulation (came with Flightscope mevo Gen 2) controls (Mulligans, Aim, Club Selection).
+* **FS Golf PC App:** Powerful practice software with customization and video capacilities.
+* **GS Pro:** This is a potential future add but will need to limits 4k graphic at that time due to the GPU. 
