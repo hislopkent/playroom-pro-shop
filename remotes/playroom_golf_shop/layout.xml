@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+  <tab name="Main">
+    <row>
+      <button text="OPEN SHOP: E6 CONNECT" ontap="launch_e6" style="large" />
+    </row>
+    <row>
+      <button text="OPEN SHOP: AWESOME GOLF" ontap="launch_ag" style="large" />
+    </row>
+    <row>
+      <button text="Close Apps / Desktop" ontap="show_desktop" />
+    </row>
+  </tab>
+
+  <tab name="E6 Connect">
+    <row>
+      <button text="Mulligan" ontap="e6_mulligan" />
+      <button text="Scorecard" ontap="e6_scorecard" />
+    </row>
+    <row>
+      <button text="Aim Left" ontap="e6_left" />
+      <button text="Aim Right" ontap="e6_right" />
+    </row>
+    <row>
+      <button text="Club Up" ontap="e6_club_up" />
+      <button text="Club Down" ontap="e6_club_down" />
+    </row>
+    <row>
+      <button text="Enter" ontap="e6_enter" />
+      <button text="Menu/Esc" ontap="e6_esc" />
+    </row>
+  </tab>
+
+  <tab name="Awesome Golf">
+    <row>
+      <button text="Mulligan" ontap="ag_mulligan" />
+      <button text="Change View" ontap="ag_view" />
+    </row>
+    <row>
+      <button text="Aim Left" ontap="ag_left" />
+      <button text="Aim Right" ontap="ag_right" />
+    </row>
+    <row>
+      <button text="Select / Hit" ontap="ag_enter" />
+      <button text="Menu / Pause" ontap="ag_menu" />
+    </row>
+  </tab>
+
+</layout>
