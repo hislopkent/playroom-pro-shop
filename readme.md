@@ -8,7 +8,7 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 * **Enclosure:** [The Net Return Pro 8](https://www.thenetreturn.com/)
     * *Safety:* No Fly Zone Extension + Side Barriers
 * **Turf:** Fiberbuilt Grass Series (Hourglass)
-* **Launch Monitor:** FlightScope Mevo Gen 2 + Pro Package + Face Impact
+* **Launch Monitor:** FlightScope Mevo+ (Gen 2)
 
 ### 🖥️ The Engine (HP Z640 Workstation)
 * **GPU:** NVIDIA RTX 5060 (Gigabyte Windforce)
@@ -22,7 +22,17 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 ### 📺 The Viewing Deck
 * **Display:** 65-inch 4K TV
 * **Streaming:** Moonlight (Client) <-> Sunshine (Host)
-* **Control:** Unified Remote Custom Layouts
+* **Control:** Amazon Fire HD 10 Tablet (Wall Mounted)
+
+---
+
+## 💡 Why the RTX 5060?
+
+For this specific Z640 build, the **RTX 5060** was chosen as the "Value King" for three critical reasons:
+
+1.  **Power Safety (TDP):** The HP Z640 uses a proprietary power supply with limited rail amperage. The RTX 5060 draws only ~115W-140W, which is perfectly safe when adapting the Z640's dual 6-pin connectors (rated for 150W combined). Higher-end cards (like the 5070) risk tripping the workstation's over-current protection.
+2.  **DLSS 4 Upscaling:** Driving a 65-inch 4K TV requires immense processing power. The 5060 features NVIDIA's latest DLSS 4 AI upscaling, allowing us to render the golf simulators at 1080p for high speed, then instantly upscale them to 4K for a crisp image on the big screen.
+3.  **AV1 Encoding:** This card supports the modern AV1 video codec. This ensures the stream sent from the office PC to the TV is higher quality and lower latency than older cards, eliminating "lag" during the swing.
 
 ---
 
