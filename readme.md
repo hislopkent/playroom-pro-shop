@@ -36,6 +36,23 @@ For this specific Z640 build, the **RTX 5060** was chosen as the "Value King" fo
 
 ---
 
+## 💭 Design Philosophy & Constraints
+
+This setup was engineered with specific spatial and lifestyle constraints in mind.
+
+### 1. The "Playroom Factor" (Space & Safety)
+The primary location for this simulator is a shared **Kids' Playroom**. This introduced critical restrictions:
+* **Zero Permanence:** The setup could not permanently dominate the room. A full DIY impact screen enclosure was ruled out because it typically requires a fixed 5-foot depth frame that cannot be easily tucked away.
+* **The Solution:** [The Net Return Pro 8](https://www.thenetreturn.com/) was selected for its modularity.
+    * *Small Footprint:* By angling the **Side Barriers** inward, the total active depth is significantly less than a standard enclosure.
+    * *Safety:* The **No Fly Zone** extension ensures stray balls (from kids or high-handicap friends) don't damage the room, without requiring a permanent cage.
+
+### 2. The "Streaming vs. Projection" Decision
+While a full Impact Screen + Projector is the gold standard, it was not viable for this build due to:
+* **Hardware Hiding:** I did not want a gaming desktop tower and overhead projector permanently mounted in a playroom.
+* **Cost vs. Flexibility:** A quality projector setup is expensive and fixed.
+* **The Solution:** The **Headless Streaming** architecture allows the powerful PC (HP Z640) to live safely in the office, while the **65-inch TV** serves as the "Display" via Moonlight. This keeps the playroom clean, quiet, and free of sensitive fan-cooled electronics.
+
 ## 🚀 "Open The Shop" (BETA: Automation still in testing waiting on hardware)
 
 To keep the office monitors free for work, the simulator runs in a "Headless" state.
