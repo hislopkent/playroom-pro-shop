@@ -35,7 +35,11 @@ Follow these steps to configure the hardware, streaming, and automation.
 
 ### 1. Unlock the Tablet
 * **Tool:** Use **Fire Toolbox** (PC Software) to remove Amazon ads and install Google Play Services.
-* **Install:** Download **Unified Remote (Full)** from the Google Play Store.
+* **[ ] Install Google Services:** (Play Store)
+* **[ ] Remove Lockscreen Ads:** (Eliminate swipe-to-unlock delays)
+* **[ ] Custom Launcher:** (Install Nova Launcher for a clean interface)
+* **[ ] Disable OTA Updates:** (Prevent Amazon from undoing your work)
+* **[ ] Developer Options:** Enable "Stay Awake" so the control panel is always ready.
 
 ### 2. Load Custom Remotes
 1.  On the Z640, locate the Unified Remote custom folder:
