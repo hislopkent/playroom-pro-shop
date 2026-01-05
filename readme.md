@@ -11,13 +11,16 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 * **Launch Monitor:** FlightScope Mevo Gen 2 + Pro Package + Face Impact
 
 ### 🖥️ The Engine (HP Z640 Workstation)
-* **GPU:** NVIDIA RTX 5060 (Gigabyte Windforce)
-    * *Power Mod:* Dual 6-pin to 8-pin Adapter
-* **CPU:** Dual Intel Xeon E5-2690 v3 (24 Cores)
+* **GPU:** PNY GeForce RTX 5060 Ti Overclocked (16GB GDDR7)
+    * *Model:* VCG5060T16DFXPB1-O (Dual Fan)
+    * *Why:* 16GB VRAM is critical for 4K texture loading in GSPro/E6.
+    * *Power Mod:* Dual 6-pin to 8-pin Adapter (Essential for safe power delivery on the Z640).
+* **CPU:** Dual Intel Xeon E5-2690 v3 (24 Cores total)
+* **RAM:** 64GB DDR4
 * **Displays:**
-    1.  49" Ultrawide (Office Command)
+    1.  49" Ultrawide (Office Work)
     2.  27" Vertical (Code/Discord)
-    3.  **Ghost Monitor:** 4K HDMI Dummy Plug (The Simulator Feed)
+    3.  **Ghost Monitor:** 4K HDMI Dummy Plug (Dedicated Simulator Feed)
 
 ### 📺 The Viewing Deck
 * **Display:** 50-inch 1080P TV soon to be upgrade to 65-inch 4K TV
