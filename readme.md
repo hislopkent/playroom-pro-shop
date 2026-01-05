@@ -26,14 +26,20 @@ Welcome to the control center for **The Playroom Pro Shop** — a dual-purpose h
 
 ---
 
-## 💡 Why the RTX 5060?
+## 💡 Why the PNY RTX 5060 Ti (16GB)?
 
-For this specific Z640 build, the **RTX 5060** was chosen as the "Value King" for three critical reasons:
+The selection of the **RTX 5060 Ti 16GB** was a calculated decision to balance the HP Z640's power limits with the demands of 4K simulation.
 
-1.  **Power Safety (TDP):** The HP Z640 uses a proprietary power supply with limited rail amperage. The RTX 5060 draws only ~115W-140W, which is perfectly safe when adapting the Z640's dual 6-pin connectors (rated for 150W combined). Higher-end cards (like the 5070) risk tripping the workstation's over-current protection.
-2.  **DLSS 4 Upscaling:** Driving a 65-inch 4K TV requires immense processing power. The 5060 features NVIDIA's latest DLSS 4 AI upscaling, allowing us to render the golf simulators at 1080p for high speed, then instantly upscale them to 4K for a crisp image on the big screen.
-3.  **AV1 Encoding:** This card supports the modern AV1 video codec. This ensures the stream sent from the office PC to the TV is higher quality and lower latency than older cards, eliminating "lag" during the swing.
+1.  **The VRAM Necessity (16GB GDDR7):**
+    * Modern golf simulators (like GSPro or E6 4K) are texture-heavy. Standard 8GB cards choke when trying to load lush fairways and trees at 4K resolution, causing "stutter" during ball flight.
+    * The **16GB of GDDR7** memory ensures that high-res assets load instantly, keeping the stream buttery smooth.
 
+2.  **Power Efficiency (The Z640 Limit):**
+    * The HP Z640 power supply is older and split into limited "rails." A flagship card (like a 5080/5090) draws too much power and would trip the safety breakers.
+    * The **5060 Ti** sits in the "Goldilocks Zone" — it provides high-end performance but stays within the safe wattage range of the Z640's dual 6-pin connectors.
+
+3.  **The "Headless" Encoder:**
+    * Since we are streaming the video to the TV via Sunshine, the GPU's video encoder is just as important as its raw power. This card supports **AV1 Encoding**, which sends a clearer picture to the TV with less lag than older cards.
 ---
 
 ## 💭 Design Philosophy & Constraints
