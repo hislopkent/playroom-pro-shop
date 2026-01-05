@@ -1,0 +1,44 @@
+<layout>
+  <row>
+    <button text="OPEN SHOP" ontap="launch_ag" color="#2E7D32" style="large" />
+    <button text="CLOSE SHOP" ontap="close_shop" color="#C62828" style="large" />
+  </row>
+
+  <row>
+    <frame color="#424242" height="450" weight="1">
+       <touchpad id="pad" ontouch="touch_event" />
+    </frame>
+  </row>
+
+  <row>
+     <button text="L CLICK" ontap="left_click" style="large" />
+     <button text="SCROLL ▲" ontap="scroll_up" color="#616161" />
+     <button text="SCROLL ▼" ontap="scroll_down" color="#616161" />
+     <button text="R CLICK" ontap="right_click" style="large" />
+  </row>
+
+  <row>
+    <button text="MULLIGAN (M)" ontap="mulligan" color="#EF6C00" style="large" />
+    <button text="STOP TIMER (Space)" ontap="stop_timer" color="#D84315" style="large" />
+    <button text="SWITCH PLAYER (S)" ontap="switch_player" color="#1565C0" style="large" />
+  </row>
+
+  <row>
+     <button text="AIM LEFT / PREV" ontap="left" color="#424242" style="large" />
+     <button text="ENTER / CONTINUE" ontap="enter" color="#212121" style="large" />
+     <button text="AIM RIGHT / NEXT" ontap="right" color="#424242" style="large" />
+  </row>
+
+  <row>
+     <button text="CAM (C)" ontap="cycle_camera" color="#616161" />
+     <button text="VIEW (V)" ontap="cycle_view" color="#616161" />
+     <button text="FIRMNESS (F)" ontap="firmness" color="#616161" />
+     <button text="AUDIO (A)" ontap="toggle_audio" color="#616161" />
+  </row>
+
+  <row>
+     <button text="SELECT FS" ontap="select_fs" color="#616161" />
+     <button text="MENU / ESC" ontap="escape" color="#616161" />
+     <button text="REPLAY (R)" ontap="replay" color="#616161" />
+  </row>
+</layout>
