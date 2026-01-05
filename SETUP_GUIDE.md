@@ -4,10 +4,11 @@ Follow these steps to configure the hardware, streaming, and automation.
 
 ## Phase 1: Hardware Installation (HP Z640)
 
-1.  **Power Adapter:**
-    * Locate the two black 6-pin power cables inside the Z640 case.
-    * Connect both into the **Dual 6-Pin Female to 8-Pin Male Adapter**.
-    * Plug the 8-pin end into the **RTX 5060**.
+1.  **Power Adapter (CRITICAL):**
+    * **Do not** try to power this card with a single cable. The "Overclocked" Ti model requires stable power.
+    * Locate the **two** black 6-pin power cables inside the Z640 case.
+    * Connect **BOTH** into the Dual 6-Pin Female to 8-Pin Male Adapter.
+    * Plug the 8-pin end into the PNY RTX 5060 Ti.
 2.  **Dummy Plug:**
     * Insert the **HDMI Dummy Plug** into the RTX 5060.
     * **Windows Settings:** Go to *System > Display*. Select the new display (likely Display 3) and set Resolution to **3840 x 2160** (4K).
