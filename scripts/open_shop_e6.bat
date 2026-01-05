@@ -18,6 +18,11 @@ set Y_POS=0
 set WIDTH=3840
 set HEIGHT=2160
 
+:: --- NEW: ENABLE JUMBO MOUSE ---
+:: Size 100 is very large, perfect for 4K TVs.
+echo [STATUS] Enlarging Mouse Pointer...
+powershell -ExecutionPolicy Bypass -File "%~dp0SetCursorSize.ps1" -Size 100
+
 :: --- STEP 1: LAUNCH THE SOFTWARE ---
 echo [STATUS] Launching E6 Connect...
 :: 'start ""' tells Windows to open the app and return to this script immediately.
