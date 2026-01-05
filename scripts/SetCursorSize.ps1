@@ -1,33 +1,37 @@
 <#
 .SYNOPSIS
-    Instantly changes the Windows Mouse Cursor size.
-.DESCRIPTION
-    Used by the Playroom Pro Shop to toggle between "TV Mode" (Huge) and "Desk Mode" (Normal).
+    Instantly changes the Windows Mouse Cursor size using the Modern API.
 .PARAMETER Size
-    The size of the cursor. 32 is Normal. 48+ is Large. 100 is Jumbo.
-.EXAMPLE
-    .\SetCursorSize.ps1 -Size 128
+    The cursor height in pixels.
+    32  = Normal (Standard)
+    48  = Large
+    64  = Extra Large
+    128 = Giant (Recommended for TV)
 #>
 
 param(
     [int]$Size = 32
 )
 
-# 1. Update the Registry Key (So it remembers the setting)
-Set-ItemProperty -Path "HKCU:\Control Panel\Cursors" -Name "CursorBaseSize" -Value $Size
-
-# 2. Force Windows to Refresh the Cursor (Using C# System Calls)
-# This trick avoids needing to log off/restart.
+# Define the C# signature for the hidden Windows API call
 $CSharpSig = @'
 [DllImport("user32.dll", EntryPoint = "SystemParametersInfo")]
-public static extern bool SystemParametersInfo(int uAction, int uParam, int lpvParam, int fuWinIni);
+public static extern bool SystemParametersInfo(uint uiAction, uint uiParam, uint pvParam, uint fWinIni);
 '@
 
+# Load the function into PowerShell
+$CursorUtils = Add-Type -MemberDefinition $CSharpSig -Name WinAPICall -Namespace SystemParamInfo -PassThru
+
+# The Magic Numbers:
+# 0x2029 = Undocumented Action ID for "Set Cursor Size" on Windows 10/11
+# 0x01   = Update registry (SPIF_UPDATEINIFILE) so it persists
+$ActionID = 0x2029
+$UpdateFlag = 0x01
+
 try {
-    $Cursor = Add-Type -MemberDefinition $CSharpSig -Name Win32Utils -Namespace System -PassThru
-    # Action 0x0057 is SPI_SETCURSORS (Reloads the system cursors)
-    $Cursor::SystemParametersInfo(0x0057, 0, 0, 0x01 -bor 0x02)
-    Write-Host "Cursor resized to $Size"
+    # Execute the command
+    $CursorUtils::SystemParametersInfo($ActionID, 0, $Size, $UpdateFlag)
+    Write-Host "Success: Cursor scaled to $Size px"
 } catch {
-    Write-Error "Failed to refresh cursor. Registry updated, but restart might be needed."
+    Write-Error "Failed to resize cursor. Ensure this script is run with ExecutionPolicy Bypass."
 }
