@@ -45,6 +45,14 @@ The selection of the **RTX 5060 Ti 16GB** was a calculated decision to balance t
     * Since we are streaming the video to the TV via Sunshine, the GPU's video encoder is just as important as its raw power. This card supports **AV1 Encoding**, which sends a clearer picture to the TV with less lag than older cards.
 ---
 
+### 📡 Network Architecture (UniFi)
+Reliable connection is critical for simulator data transmission.
+* **System:** Ubiquiti UniFi (UDM-Pro / Access Points)
+* **Configuration:** Dedicated 5GHz-only SSID (`Mevo_Link`)
+* **Connection Mode:** The Mevo Gen 2 is configured in **Wi-Fi Client Mode** to connect *to* the home network.
+    * *Benefit:* This allows the Z640 workstation to maintain its high-speed ethernet connection for internet/streaming while communicating with the Mevo+ over the local LAN, eliminating the need to toggle Wi-Fi networks.
+---
+
 ## 💭 Design Philosophy & Constraints
 
 This setup was engineered with specific spatial and lifestyle constraints in mind.
