@@ -31,7 +31,7 @@ Welcome to the control center for **The Playroom Pro Shop** — a headless golf 
 ## 🎮 The Interface
 The system runs a custom **Playnite** dashboard on the Ghost Monitor. This allows for controller-friendly navigation between simulators without needing a mouse/keyboard for complex Windows tasks.
 
-![Playnite Dashboard](images/playknite.jpeg)
+![Playnite Dashboard](images/playknite.png)
 *The custom Pro Shop Dashboard running on the 4K Dummy Plug (downscaled to 1080p).*
 
 ---
