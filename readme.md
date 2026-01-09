@@ -53,10 +53,10 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 * **Mouse Trap:** `Dual Monitor Tools` locks the cursor to the Ghost Monitor to prevent accidental clicks on the office screens.
 
 **Supported Software:**
-* **E6 Connect** (Windowed Mode)
+* **E6 Connect** 
 * **Awesome Golf**
-* **FS Golf PC** (FlightScopeVideoTeachingApp.exe)
-* **GSPro** (Via Launcher)
+* **FS Golf PC**
+* **GSPro**
 
 ---
 
