@@ -42,6 +42,8 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 **Key Features:**
 * **Auto-Move:** Scripts utilize `nircmd` to force game windows from the main screen to the Ghost Monitor.
 * **Jumbo Mouse:** `SetCursorSize.ps1` increases cursor size so it is visible on the TV from 10 feet away.
+    * *Default:* Size 64 (Optimized for 1080p).
+    * *Note:* If upgrading to 4K, scripts should be updated to Size 100.
 * **Mouse Trap:** `Dual Monitor Tools` locks the cursor to the Ghost Monitor to prevent accidental clicks on the office screens.
 
 **Supported Software:**
@@ -64,7 +66,7 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 2.  You will see the **Playnite Dashboard** waiting on the TV.
 3.  Use the Logitech K400 to select your game (e.g., *GSPro*).
 4.  **The Script Runs:**
-    * Mouse scales up for visibility.
+    * Mouse scales up (Size 64).
     * Game launches and moves to the TV.
     * Mouse locks to the TV screen.
 5.  **Golf.**
@@ -80,9 +82,11 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 
 ## 📝 Configuration Notes
 
-### Network (UniFi)
-* **Mevo_Link:** Dedicated 5GHz SSID for the Mevo+ (Client Mode).
-* **Shield TV:** Connected via Ethernet for low-latency streaming.
+### Graphics Optimization (V-Sync)
+To prevent interference with the main 49" Ultrawide monitor, **V-Sync is enabled Per-App** rather than globally.
+* **NVIDIA Control Panel > Manage 3D Settings > Program Settings**
+* **Vertical Sync:** ON (For `GSPro.exe`, `E6Connect.exe`, etc.)
+* *Why:* This locks the simulator to 60Hz (matching the TV) for smooth visuals without capping the frame rate on the main office monitor.
 
 ### GPU Performance Note
 * **Resolution Strategy:** By matching the Dummy Plug to the TV (1080p), the RTX 5060 Ti is not burdened with downscaling 4K content. This allows for **Ultra** graphics settings in GSPro and high frame rates for smooth ball flight.
