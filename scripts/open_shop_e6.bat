@@ -1,44 +1,52 @@
 @echo off
 :: ============================================================================
 :: SCRIPT: OPEN SHOP (E6 CONNECT)
-:: AUTHOR: Kent Hislop
-:: PURPOSE: Launches E6 Connect and moves it to the "Ghost Monitor" (Dummy Plug)
-:: DEPENDENCIES: nircmd.exe must be installed or in the same folder.
+:: PURPOSE: Launches E6 Connect, moves to Ghost Monitor, and LOCKS mouse.
 :: ============================================================================
 
-:: --- CONFIGURATION SECTION ---
-:: X_POS: The pixel coordinate where your Dummy Plug starts.
-:: (Example: If main screens are 5120px wide, the dummy starts at 5120)
+:: --- CONFIGURATION ---
+:: X_POS: Pixel coordinate where Dummy Plug starts (Width of your main monitors)
+:: CHECK THIS: If your main screens are not 5120px wide, update this number.
 set X_POS=5120
-
-:: Y_POS: Always 0 unless you have stacked monitors.
 set Y_POS=0
 
-:: RESOLUTION: The target resolution of your TV/Dummy Plug (4K = 3840x2160)
+:: RESOLUTION: Target resolution of Dummy Plug
 set WIDTH=3840
 set HEIGHT=2160
 
-:: --- NEW: ENABLE JUMBO MOUSE ---
-:: Size 100 is very large, perfect for 4K TVs.
+:: --- STEP 1: ENABLE JUMBO MOUSE ---
 echo [STATUS] Enlarging Mouse Pointer...
-powershell -ExecutionPolicy Bypass -File "%~dp0SetCursorSize.ps1" -Size 100
+powershell -ExecutionPolicy Bypass -File "%~dp0SetCursorSize.ps1" -Size 64
 
-:: --- STEP 1: LAUNCH THE SOFTWARE ---
+:: --- STEP 2: LAUNCH E6 CONNECT ---
 echo [STATUS] Launching E6 Connect...
-:: 'start ""' tells Windows to open the app and return to this script immediately.
-start "" "C:\Program Files (x86)\E6 Connect\E6Connect.exe"
 
-:: --- STEP 2: WAIT FOR LOAD ---
-:: E6 Connect is a heavy application. We wait 15 seconds to ensure the window
-:: is fully created before we try to move it.
-:: If the game isn't moving, increase this number (e.g., timeout /t 20)
-echo [STATUS] Waiting 15 seconds for startup...
-timeout /t 15
+:: 1. Force script to looking inside the E6 folder first (The Fix)
+cd /d "C:\Program Files\E6 Golf\E6 Connect"
 
-:: --- STEP 3: MOVE TO GHOST MONITOR ---
-:: We use 'nircmd' to grab the window named "E6 Connect" and force it
-:: to the coordinates defined above.
-:: Syntax: setsize [title] [x] [y] [width] [height]
+:: 2. Now launch the specific EXE
+start "" "E6Connect.exe"
+
+:: --- STEP 3: WAIT FOR LOAD ---
+:: E6 takes a while. If the window doesn't move, increase this number.
+echo [STATUS] Waiting 20 seconds for startup...
+timeout /t 20
+
+:: --- STEP 4: MOVE TO GHOST MONITOR ---
 nircmd win setsize title "E6 Connect" %X_POS% %Y_POS% %WIDTH% %HEIGHT%
 
-echo [SUCCESS] E6 Connect is running on the Ghost Display.
+:: --- NEW STEP: FORCE FOCUS ---
+:: Click on the window to ensure Windows knows it's active
+nircmd win activate title "E6 Connect"
+timeout /t 1
+
+:: --- STEP 5: TRAP THE MOUSE ---
+echo [STATUS] Locking Mouse to Simulator Screen...
+:: CRITICAL: Update these numbers using the PowerShell trick if the mouse misses the center.
+set MOUSE_X=7040
+set MOUSE_Y=1080
+
+nircmd setcursor %MOUSE_X% %MOUSE_Y%
+"%ProgramFiles(x86)%\Dual Monitor Tools\DMT.exe" "DMT:Cursor:LockCursor"
+
+echo [SUCCESS] E6 Connect is running and Mouse is Locked.
