@@ -28,6 +28,14 @@ Welcome to the control center for **The Playroom Pro Shop** — a headless golf 
 
 ---
 
+## 🎮 The Interface
+The system runs a custom **Playnite** dashboard on the Ghost Monitor. This allows for controller-friendly navigation between simulators without needing a mouse/keyboard for complex Windows tasks.
+
+![Playnite Dashboard](images/playknite.jpeg)
+*The custom Pro Shop Dashboard running on the 4K Dummy Plug (downscaled to 1080p).*
+
+---
+
 ## 📡 The "Headless" Architecture
 
 To keep the office monitors free for work, the simulator runs in a "Headless" state on a virtual display.
@@ -41,9 +49,7 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 
 **Key Features:**
 * **Auto-Move:** Scripts utilize `nircmd` to force game windows from the main screen to the Ghost Monitor.
-* **Jumbo Mouse:** `SetCursorSize.ps1` increases cursor size so it is visible on the TV from 10 feet away.
-    * *Default:* Size 64 (Optimized for 1080p).
-    * *Note:* If upgrading to 4K, scripts should be updated to Size 100.
+* **Jumbo Mouse:** `SetCursorSize.ps1` increases cursor size to **64px** so it is visible on the TV from 10 feet away.
 * **Mouse Trap:** `Dual Monitor Tools` locks the cursor to the Ghost Monitor to prevent accidental clicks on the office screens.
 
 **Supported Software:**
@@ -72,7 +78,7 @@ We utilize custom Batch and PowerShell scripts to manage the transition between 
 5.  **Golf.**
 
 ### 3. How to "Close Shop"
-1.  In Playnite, select the **"Close Shop"** button.
+1.  In Playnite, select the **"Close Shop"** button (The "Exit" Icon).
 2.  **The Script Runs:**
     * Force closes all simulator engines.
     * Unlocks the mouse.
